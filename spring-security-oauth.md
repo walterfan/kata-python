@@ -140,3 +140,7 @@ public class OAuth2AuthorizationServerConfigJwt extends AuthorizationServerConfi
 
 ```
 
+# Reference
+* https://spring.io/guides/tutorials/spring-boot-oauth2/
+* https://www.baeldung.com/spring-security-oauth
+* https://github.com/spring-guides/tut-spring-boot-oauth2.git
