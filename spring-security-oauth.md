@@ -46,3 +46,21 @@ Provider 的角色实际上可分为 认证服务 Authorization Service 和资�
 
 > An important aspect of the provider configuration is the way that an authorization code is supplied to an OAuth client (in the authorization code grant). A authorization code is obtained by the OAuth client by directing the end-user to an authorization page where the user can enter her credentials, resulting in a redirection from the provider authorization server back to the OAuth client with the authorization code. Examples of this are elaborated in the OAuth 2 specification.
 
+## Configuring Client Details
+
+> The ClientDetailsServiceConfigurer (a callback from your AuthorizationServerConfigurer) can be used to define an in-memory or JDBC implementation of the client details service. 
+
+客户端细节服务配置(一个从 AuthorizationServerConfigurer 发起的回调), 可被用于定义一个放在内存或JDBC中的 ClientDetailsService 实现
+
+
+> Important attributes of a client are
+
+* clientId: (required) the client id.
+* secret: (required for trusted clients) the client secret, if any.
+* scope: The scope to which the client is limited. If scope is undefined or empty (the default) the client is not limited by scope.
+* authorizedGrantTypes: Grant types that are authorized for the client to use. Default value is empty.
+* authorities: Authorities that are granted to the client (regular Spring Security authorities).
+
+> Client details can be updated in a running application by access the underlying store directly (e.g. database tables in the case of JdbcClientDetailsService) or through the ClientDetailsManager interface (which both implementations of ClientDetailsService also implement).
+
+
