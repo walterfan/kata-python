@@ -27,3 +27,22 @@ Provider 的角色实际上可分为 认证服务 Authorization Service 和资�
 > For all the OAuth 2.0 provider features, configuration is simplified using special Spring OAuth @Configuration adapters. 
 
 # Authorization Server Configuration
+
+> The @EnableAuthorizationServer annotation is used to configure the OAuth 2.0 Authorization Server mechanism, together with any @Beans that implement AuthorizationServerConfigurer (there is a handy adapter implementation with empty methods). 
+
+认证服务器配置
+
+> ClientDetailsServiceConfigurer: a configurer that defines the client details service. Client details can be initialized, or you can just refer to an existing store.
+
+客户端细节服务配置
+
+> AuthorizationServerSecurityConfigurer: defines the security constraints on the token endpoint.
+
+认证服务器安全配置
+
+> AuthorizationServerEndpointsConfigurer: defines the authorization and token endpoints and the token services.
+
+认证服务器端点配置
+
+> An important aspect of the provider configuration is the way that an authorization code is supplied to an OAuth client (in the authorization code grant). A authorization code is obtained by the OAuth client by directing the end-user to an authorization page where the user can enter her credentials, resulting in a redirection from the provider authorization server back to the OAuth client with the authorization code. Examples of this are elaborated in the OAuth 2 specification.
+
