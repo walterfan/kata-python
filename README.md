@@ -1,2 +1,6 @@
-# tips
-record some tips here temporarily 
+Seven Weapons
+----------------
+1) FileLogger.py
+2) EmailSender.py
+
+
