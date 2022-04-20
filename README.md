@@ -32,5 +32,5 @@ Namespaces are one honking great idea – let's do more of those! | 命名空间
 
 # Python libraries
 * [async](https://docs.python.org/3/library/asyncio.html), [asynctest](https://asynctest.readthedocs.io/en/latest/index.html)
-* [aiiortc](https://github.com/aiortc/aiortc)
+* [aiortc](https://github.com/aiortc/aiortc)
 
