@@ -24,13 +24,12 @@ If the implementation is easy to explain, it may be a good idea. | 如果实现�
 Namespaces are one honking great idea – let's do more of those! | 命名空间是个不错的想法, 让我们就象那样做得更多
 
 
-# Python scripts
+# Learning notes
+* [beautiful_python wiki](https://github.com/walterfan/beautiful_python/wiki)
 
+
+# Demoe and examples
 * FileLogger.py
 * EmailSender.py
 * ...
-
-# Python libraries
-* [async](https://docs.python.org/3/library/asyncio.html), [asynctest](https://asynctest.readthedocs.io/en/latest/index.html)
-* [aiortc](https://github.com/aiortc/aiortc)
 
