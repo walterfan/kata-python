@@ -25,7 +25,7 @@ Namespaces are one honking great idea – let's do more of those! | 命名空间
 
 
 # Learning notes
-* [beautiful_python wiki](https://github.com/walterfan/beautiful_python/wiki)
+* [beautiful python wiki](https://github.com/walterfan/beautiful_python/wiki)
 
 
 # Demoe and examples
