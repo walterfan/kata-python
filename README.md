@@ -23,6 +23,7 @@ If the implementation is hard to explain, it's a bad idea. | 如果实现很难�
 If the implementation is easy to explain, it may be a good idea. | 如果实现很容易说清楚, 那它是个好主意
 Namespaces are one honking great idea – let's do more of those! | 命名空间是个不错的想法, 让我们就象那样做得更多
 
+Python Style: https://peps.python.org/pep-0008/
 
 # Code Repo
 
