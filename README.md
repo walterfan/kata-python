@@ -30,7 +30,7 @@ Python Style: https://peps.python.org/pep-0008/
 * [CPython](https://github.com/python/cpython)
   - [Tutorial rst](https://github.com/python/cpython/blob/main/Doc/tutorial)
   - [Demo program](https://github.com/python/cpython/blob/main/Tools/demo)
-  - 
+  
 # Tutorial
 
 * [Python Tutorial](https://docs.python.org/3/tutorial/)
