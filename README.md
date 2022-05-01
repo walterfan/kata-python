@@ -24,7 +24,20 @@ If the implementation is easy to explain, it may be a good idea. | 如果实现�
 Namespaces are one honking great idea – let's do more of those! | 命名空间是个不错的想法, 让我们就象那样做得更多
 
 
+# Code Repo
+
+* [CPython](https://github.com/python/cpython)
+  - [Tutorial rst](https://github.com/python/cpython/blob/main/Doc/tutorial)
+  - [Demo program](https://github.com/python/cpython/blob/main/Tools/demo)
+  - 
+# Tutorial
+
+* [Python Tutorial](https://docs.python.org/3/tutorial/)
+* [Python programming tutorial for beginners](https://github.com/Akuli/python-tutorial)
+
+
 # Learning notes
+
 * [beautiful python wiki](https://github.com/walterfan/beautiful_python/wiki)
 
 
