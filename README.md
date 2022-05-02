@@ -25,11 +25,16 @@ Namespaces are one honking great idea – let's do more of those! | 命名空间
 
 Python Style: https://peps.python.org/pep-0008/
 
-# Code Repo
+# Beautiful code
 
 * [CPython](https://github.com/python/cpython)
   - [Tutorial rst](https://github.com/python/cpython/blob/main/Doc/tutorial)
   - [Demo program](https://github.com/python/cpython/blob/main/Tools/demo)
+  
+* [howdoi](https://github.com/gleitz/howdoi)
+* [Diamond](https://github.com/python-diamond/Diamond)
+* [requests](https://github.com/psf/requests)
+* [flask](https://github.com/pallets/flask)
   
 # Tutorial
 
