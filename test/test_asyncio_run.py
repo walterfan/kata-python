@@ -6,8 +6,8 @@ import time
 
 
 def setup_function(function):
-    print("start...", function)
-    
+    print(f"setup at {time.strftime('%X')} for ", function)
+
 async def say_after(delay, what):
     await asyncio.sleep(delay)
     print(what)

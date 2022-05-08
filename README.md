@@ -29,7 +29,15 @@ Namespaces are one honking great idea – let's do more of those! | 命名空间
 
 
 # Demoe and examples
-* FileLogger.py
-* EmailSender.py
-* ...
 
+1. demo
+
+```
+fab -l
+```
+
+2. test
+
+```
+pytest -s test/
+```
