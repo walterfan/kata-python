@@ -1,0 +1,74 @@
+@startuml
+class MediaMgr {
+    this.sessionMgr = ctx;
+    this.cmsc = ctx.cmsc;
+    this._trace = this.cmsc._trace;
+    this.peerConnEx = [];
+    this.peerId = 0;
+    this.sendSessionMessage = sendSessionMessage;
+
+    _init = function(ctx, sendSessionMessage);
+
+    [session message handling]
+    ..
+    onSessionMsg = function(peerId, webRtcMsg) ;
+
+    [module service]
+    ..
+    close = function()();
+    -- import
+    setupMedia = function(nConnections, config, nExtraConnections);
+    updateIceServer = function(avServer, avIceServer)
+    updateServerDst = function(asServer, serverDst)
+
+    function renewRTCPeerConnection(pcEx);
+
+    deleteRTCPeerConnection = function(stPeerId, nConn)
+    stop = function(startConn, nConn)
+    addStream = function(peerId, stream) 
+    addStreamSharing = function(resultCb)
+
+    addStreamVideo = function(sendArray, resultCb) ;
+
+    isLocalVideoAddedForBundle = function (pcEx)
+    muteVideo = function (peerId, bMute, mediaStream, scaleDownBy, nExtraMaxVideoTrack)
+    removeStream = function(peerId, stream) 
+    removeStreamSharing = function() 
+    resetRecordEx = function (recordEx, state)
+    removeStreamVideo = function()
+    getAnswer = function(peerId)
+    getOffer = function(startConn, nConn)
+    createMediaIdMapping = function(peerId, trackMap) 
+    storeSdpInfo = function(peerId, sdp, property, regex)
+    getSdpInfo = function(peerId)
+
+    [ event call backs ]
+   ..
+    gotLocalIceCandidate = function(peerId, event)
+    gotRemoteTrack = function(peerId, event)
+    gotRemoteStream = function(peerId, event)
+
+    [ callback handling ]
+   ..
+    function onMediaError(peerId, funName, errorMsg)
+    function onSuccess(peerId, funName)
+    function mediaHandleCb(record, funName, errorMsg) 
+
+    [ messages from remote sites ]
+    ..
+    recvInfoFromRemote = function(peerId, msg);
+    recvFromRemoteDesc = function(peerId, description)
+    recvInfoFromRemote = function(peerId, msg)
+
+
+    startCheckStatsFromPC = function (peerId, reportStats, connMonitor)
+    stopCheckStatsFromPC = function(peerId, reportStats, connMonitor)
+
+    [ session services ]
+    ..
+    openMedia = function(mediaType, successCb, failureCb)
+    manageMedia = function(mediaType, action, successCb, failureCb) 
+
+}
+
+@enduml

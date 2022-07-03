@@ -1,0 +1,15 @@
+@startuml
+class task {
+    worker_id text,
+    time_slot text,
+    time timeuuid,
+    attributes text,
+    PRIMARY KEY ((worker_id, time_slot), time)
+}
+
+class task_time_slot {
+    worker_id text,
+    time_slot text,
+    PRIMARY KEY (worker_id, time_slot)
+}
+@enduml

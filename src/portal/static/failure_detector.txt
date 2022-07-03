@@ -1,0 +1,13 @@
+@startuml
+interface IFailureDetector
+{
+    + boolean isAlive(InetAddressAndPort ep);
+    + void interpret(InetAddressAndPort ep);
+    + void report(InetAddressAndPort ep);
+    + void remove(InetAddressAndPort ep);
+    + void forceConviction(InetAddressAndPort ep);
+    + void registerFailureDetectionEventListener(IFailureDetectionEventListener listener);
+    + void unregisterFailureDetectionEventListener(IFailureDetectionEventListener listener);
+}
+
+@enduml

@@ -1,0 +1,16 @@
+digraph {
+    label="";
+    node [shape="box"];
+    rankdir=LR;
+
+    	start[shape = "circle", style = filled, color = lightgrey];
+	end[shape = "circle", style = filled, color = lightgrey];
+
+    	start -> CWCBFlowRtp::updateStat;
+	a -> b[label="yes"];
+	a -> c[label="no"];
+	b -> end;
+	c -> end;
+
+
+}

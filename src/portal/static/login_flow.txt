@@ -1,0 +1,21 @@
+digraph {
+    label="";
+    node [shape="box"];
+
+    	IsAuthorized[shape = "diamond", style = ""];
+	end[shape = "circle", style = filled, color = lightgrey];
+	start[shape = "circle", style = filled, color = lightgrey];
+	IsExceedMaxAttempts[shape = "diamond", style = ""];
+
+    	start -> IsExceedMaxAttempts;
+	IsExceedMaxAttempts -> Login[label=no];
+	IsExceedMaxAttempts -> LockAccount[label=yes];
+	LockAccount -> DisplayAlert;
+	Login -> IsAuthorized;
+	IsAuthorized -> GrantAccess[label="yes"];
+	IsAuthorized -> IsExceedMaxAttempts[label="no"];
+	GrantAccess -> end;
+	DisplayAlert -> end;
+
+
+}

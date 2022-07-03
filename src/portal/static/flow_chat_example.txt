@@ -1,0 +1,15 @@
+digraph {
+    label="";
+    node [shape="box"];
+
+    	end[shape = "circle", style = filled, color = lightgrey];
+	start[shape = "circle", style = filled, color = lightgrey];
+
+    	start -> a;
+	a -> b[label="yes"];
+	a -> c[label="no"];
+	b -> end;
+	c -> end;
+
+
+}

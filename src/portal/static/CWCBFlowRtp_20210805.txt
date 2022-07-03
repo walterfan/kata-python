@@ -1,0 +1,18 @@
+digraph {
+    label="";
+    node [shape="box"];
+
+    	start[shape = "circle", style = filled, color = lightgrey];
+	end[shape = "circle", style = filled, color = lightgrey];
+
+    	start -> OnTurnPacket;
+	OnTurnPacket -> OnReceiveRawData;
+	OnReceiveRawData -> DecryptRawData_n;
+	DecryptRawData_n -> ProcessPacket_n;
+	ProcessPacket_n -> HandleRtpFlowCtl;
+	HandleRtpFlowCtl -> peekRecvRtpPacket;
+	peekRecvRtpPacket -> updateStat;
+	updateStat -> end;
+
+
+}

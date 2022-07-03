@@ -1,0 +1,13 @@
+graph {
+    label="";
+    labelloc=t;
+    rankdir=LR;
+    node [shape=box style=filled, color=lightyellow];
+    
+    
+
+    	cas -- cql;
+	cas -- mod;
+	cas -- arch;
+	mod -- trait;
+}

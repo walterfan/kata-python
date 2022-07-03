@@ -1,0 +1,59 @@
+@startuml
+Interface EventExecutorGroup
+Interface ScheduledExecutorService
+Interface Iterable
+interface EventExecutor
+interface EventLoop
+abstract class SingleThreadEventLoop
+class EpollEventLoop
+abstract class Selector
+class SelectedSelectionKeySetSelector 
+
+EventExecutorGroup --|> ScheduledExecutorService
+EventExecutorGroup --|> Iterable
+EventExecutor --|> EventExecutorGroup
+EventLoopGroup --|> EventExecutorGroup
+EventLoop --|> EventLoopGroup
+SingleThreadEventLoop --|>  EventLoop
+EpollEventLoop --|> SingleThreadEventLoop
+NioEventLoop --|> SingleThreadEventLoop
+SelectedSelectionKeySetSelector --|> Selector
+NioEventLoop o-- Selector
+
+interface EventExecutorGroup {
+    EventExecutor next();
+    Iterator<EventExecutor> iterator();
+    Future<?> submit(Runnable task);
+   <V> ScheduledFuture<V> schedule(Callable<V> callable, long delay, TimeUnit unit);
+    Future<?> shutdownGracefully(long quietPeriod, long timeout, TimeUnit unit);
+    size();
+}
+
+interface EventLoopGroup  {
+    next();
+    ChannelFuture register(Channel channel);
+    ChannelFuture register(ChannelPromise promise);
+}
+
+interface EventExecutor {
+    EventExecutor next();
+    EventExecutorGroup parent();
+    boolean inEventLoop();
+    boolean inEventLoop(Thread thread);
+    <V> Promise<V> newPromise();
+    <V> ProgressivePromise<V> newProgressivePromise();
+    <V> Future<V> newSucceededFuture(V result);
+    <V> Future<V> newFailedFuture(Throwable cause);
+}
+
+interface EventLoop {
+    EventLoopGroup parent();
+}
+
+class NioEventLoop {
+    private Selector selector;
+    private Selector unwrappedSelector;
+    private SelectedSelectionKeySet selectedKeys;
+    private final SelectorProvider provider;
+}
+@enduml
