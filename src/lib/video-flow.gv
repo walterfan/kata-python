@@ -1,0 +1,19 @@
+// WebRTC Video Flow
+digraph "video-flow" {
+	node [shape=box]
+	start [label=start shape=ellipse]
+	end [label=end shape=ellipse]
+	node_1 [label="call::DeliverPacket" shape=box]
+	start -> node_1
+	node_2 [label="Call::DeliverRtp" shape=box]
+	node_1 -> node_2
+	node_3 [label="Call::IdentifyReceivedPacket(" shape=box]
+	node_2 -> node_3
+	node_4 [label="video_receiver_controller_.OnRtpPacket(parsed_packet))" shape=box]
+	node_3 -> node_4
+	node_5 [label="demuxer_.OnRtpPacket(packet)" shape=box]
+	node_4 -> node_5
+	node_6 [label="RtpDemuxer::ResolveSink(packet)" shape=box]
+	node_5 -> node_6
+	node_6 -> end
+}
